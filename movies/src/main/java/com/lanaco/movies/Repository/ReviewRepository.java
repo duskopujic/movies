@@ -1,0 +1,10 @@
+package com.lanaco.movies.Repository;
+
+import com.lanaco.movies.Models.Review;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ReviewRepository extends JpaRepository<Review, Integer> {
+    List<Review>findAllByUserId(int Id);
+}
