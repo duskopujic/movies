@@ -1,4 +1,4 @@
-package com.lanaco.movies;
+package com.lanaco.movies.Config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

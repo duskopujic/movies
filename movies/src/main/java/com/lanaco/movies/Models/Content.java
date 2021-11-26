@@ -1,13 +1,12 @@
 package com.lanaco.movies.Models;
 
-import com.lanaco.movies.Models.Dto.ContentResponseDto;
+import com.lanaco.movies.Models.Response.ContentResponseDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
