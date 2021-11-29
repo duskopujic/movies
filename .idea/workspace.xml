@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1688da-aa0c-4fe5-8ab9-afae24ddb515" name="Changes" comment="my first git">
-      <change afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Request/ContentRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/movies/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/ContentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Response/ContentResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Request/UsersRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/MoviesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/ContentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/ContentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/ContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/ContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/ContentServiceImpl.java" afterDir="false" />
+    <list default="true" id="eefec6c3-29e1-4060-a6e9-dee0b2e8d912" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/MoviesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +81,7 @@
       <map>
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
-        <entry key="JPA Structure" value="false" />
+        <entry key="JPA Structure" value="true" />
       </map>
     </option>
   </component>
@@ -116,11 +108,11 @@
   </component>
   <component name="RunManager">
     <configuration name="MoviesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lanaco.movies.Config.MoviesApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.lanaco.movies.MoviesApplication" />
       <module name="movies" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lanaco.movies.Config.*" />
+          <option name="PATTERN" value="com.lanaco.movies.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,6 +186,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />

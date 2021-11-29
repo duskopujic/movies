@@ -1,0 +1,16 @@
+Index: movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java b/movies/src/main/java/com/lanaco/movies/MoviesApplication.java
+rename from movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java
+rename to movies/src/main/java/com/lanaco/movies/MoviesApplication.java
+--- a/movies/src/main/java/com/lanaco/movies/Config/MoviesApplication.java	
++++ b/movies/src/main/java/com/lanaco/movies/MoviesApplication.java	
+@@ -1,4 +1,4 @@
+-package com.lanaco.movies.Config;
++package com.lanaco.movies;
+ 
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,352 @@
+Index: movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.lanaco.movies.Repository;\r\n\r\nimport com.lanaco.movies.Models.Users;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\nimport org.springframework.stereotype.Repository;\r\n\r\nimport java.util.List;\r\n@Repository\r\npublic interface UsersRepository extends JpaRepository<Users,Integer>{\r\n    List<Users>findAllByUserIdGreaterThanOrderByUserIdDesc(int id);\r\n}\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java b/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java
+--- a/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java	
++++ b/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java	
+@@ -5,9 +5,16 @@
+ import org.springframework.stereotype.Repository;
+ 
+ import java.util.List;
++import java.util.Optional;
++
+ @Repository
+ public interface UsersRepository extends JpaRepository<Users,Integer>{
+     List<Users>findAllByUserIdGreaterThanOrderByUserIdDesc(int id);
++    Optional<Users>findByEmail(String email);
++    Optional<Users>findByUsersName(String UserName);
++    Optional<Users>findByUserNameOrEmail(String userName,String email);
++    Boolean existsByUsersName(String userName);
++    Boolean existByEmail(String email);
+ }
+ 
+ 
+Index: movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.lanaco.movies.Services.Impl;\r\n\r\nimport com.lanaco.movies.Repository.UsersRepository;\r\nimport com.lanaco.movies.Models.Users;\r\nimport com.lanaco.movies.Services.UsersService;\r\nimport org.springframework.stereotype.Service;\r\n\r\nimport java.util.List;\r\n\r\n@Service\r\npublic class UsersServiceImpl implements UsersService {\r\n    private final UsersRepository usersRepository;\r\n\r\n    public UsersServiceImpl(UsersRepository usersRepository){\r\n        this.usersRepository = usersRepository;\r\n    }\r\n    @Override\r\n    public Users create(Users users){\r\n        return usersRepository.save(users);\r\n    }\r\n    @Override\r\n    public List<Users>findAll(){\r\n        return usersRepository.findAllByUserIdGreaterThanOrderByUserIdDesc(0);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java b/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java
+--- a/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java	
++++ b/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java	
+@@ -9,7 +9,7 @@
+ 
+ @Service
+ public class UsersServiceImpl implements UsersService {
+-    private final UsersRepository usersRepository;
++   private final UsersRepository usersRepository;
+ 
+     public UsersServiceImpl(UsersRepository usersRepository){
+         this.usersRepository = usersRepository;
+Index: movies/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server.port=8080\r\n\r\n//spring.datasource.url=jdbc:postgresql://localhost:5432/movies\r\n//spring.datasource.username=postgres\r\n//spring.datasource.password=dusko1102\r\n\r\nspring.profiles.active=@currentProfile@\r\n\r\nspring.jpa.show-sql=true\r\nspring.jpa.properties.hibernate.format_sql=true
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/movies/src/main/resources/application.properties b/movies/src/main/resources/application.properties
+--- a/movies/src/main/resources/application.properties	
++++ b/movies/src/main/resources/application.properties	
+@@ -4,6 +4,7 @@
+ //spring.datasource.username=postgres
+ //spring.datasource.password=dusko1102
+ 
++
+ spring.profiles.active=@currentProfile@
+ 
+ spring.jpa.show-sql=true
+Index: movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.lanaco.movies.Models.Dto;\r\n\r\nimport com.lanaco.movies.Models.MoviePeople;\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;\r\n\r\nimport java.time.LocalDate;\r\n\r\n@Data\r\n@NoArgsConstructor\r\npublic class MoviePeopleDto {\r\n\r\n    public String firstName;\r\n    public String lastName;\r\n    public LocalDate birthDate;\r\n    public String geneder;\r\n\r\npublic MoviePeople toMoviePeople(){\r\n return new MoviePeople()\r\n         .setFirstName(firstName)\r\n         .setLastName(lastName)\r\n         .setBirthDate(birthDate)\r\n         .setGeneder(geneder);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java b/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java
+--- a/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java	
++++ b/movies/src/main/java/com/lanaco/movies/Models/Dto/MoviePeopleDto.java	
+@@ -1,5 +1,6 @@
+ package com.lanaco.movies.Models.Dto;
+ 
++import com.fasterxml.jackson.annotation.JsonFormat;
+ import com.lanaco.movies.Models.MoviePeople;
+ import lombok.Data;
+ import lombok.NoArgsConstructor;
+Index: movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.lanaco.movies.Controllers;\r\n\r\nimport com.lanaco.movies.Models.Dto.MoviePeopleDto;\r\nimport com.lanaco.movies.Models.MoviePeople;\r\nimport com.lanaco.movies.Services.MoviePeopleService;\r\nimport org.springframework.cache.annotation.CachePut;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\n\r\nimport java.time.LocalDate;\r\nimport java.util.Date;\r\nimport java.util.List;\r\nimport java.util.Optional;\r\n\r\n@RestController\r\n@RequestMapping (path = \"/movie-people\")\r\npublic class MoviePeopleController\r\n{\r\n    private final MoviePeopleService moviePeopleService;\r\n\r\n    public MoviePeopleController(MoviePeopleService moviePeopleService)\r\n    {\r\n        this.moviePeopleService=moviePeopleService;\r\n    }\r\n    @GetMapping(\"/all\")\r\n    public ResponseEntity<List<MoviePeople>>findAllMoviePeople()\r\n    {\r\n        List<MoviePeople>allMoviePeople= moviePeopleService.findAll();\r\n        return ResponseEntity.ok(allMoviePeople);\r\n    }\r\n    @GetMapping(\"\")\r\n    public ResponseEntity<MoviePeople>getOneMoviePeople(@RequestParam(\"id\")int id){\r\n        Optional<MoviePeople> optionalMoviePeople = moviePeopleService.findOneById(id);\r\n        if(optionalMoviePeople.isPresent())\r\n        {\r\n            return ResponseEntity.ok(optionalMoviePeople.get());\r\n        }\r\n        return new ResponseEntity<>(HttpStatus.NOT_FOUND);\r\n    }\r\n    @PostMapping(\"/save\")\r\n    public  ResponseEntity<MoviePeople> create(@RequestBody MoviePeopleDto moviePeopleParam)\r\n    {\r\n        MoviePeople createdMoviePeople = moviePeopleService.create(moviePeopleParam.toMoviePeople());\r\n                return ResponseEntity.ok(createdMoviePeople);\r\n    }\r\n    @PutMapping(\"/update\")\r\n    public ResponseEntity<MoviePeople> updateMoviePeople(@RequestParam(\"id\")int id,\r\n                                                         @RequestParam(\"firstName\")String firstName,\r\n                                                         @RequestParam(\"lastName\")String lastName,\r\n                                                         @RequestParam(\"birthDate\") LocalDate birthDate,\r\n                                                         @RequestParam(\"gender\")String gender)\r\n    {\r\n        Optional<MoviePeople> optionalMoviePeople = moviePeopleService.findOneById(id);\r\n        if (optionalMoviePeople.isPresent())\r\n        {\r\n            MoviePeople moviePeople = optionalMoviePeople.get();\r\n            moviePeople.setFirstName(firstName);\r\n            moviePeople.setLastName(lastName);\r\n            moviePeople.setBirthDate(birthDate);\r\n            moviePeople.setGeneder(gender);\r\n            moviePeopleService.create(moviePeople);\r\n            return ResponseEntity.ok(moviePeople);\r\n        }\r\n        return new ResponseEntity<>(HttpStatus.NOT_FOUND);\r\n    }\r\n    @DeleteMapping(\"/delete\")\r\n    public void deleteMoviePeople(@RequestParam(\"id\")int id){\r\n        moviePeopleService.deleteById(id);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java b/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java
+--- a/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java	
++++ b/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java	
+@@ -4,6 +4,7 @@
+ import com.lanaco.movies.Models.MoviePeople;
+ import com.lanaco.movies.Services.MoviePeopleService;
+ import org.springframework.cache.annotation.CachePut;
++import org.springframework.format.annotation.DateTimeFormat;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.*;
+@@ -49,7 +50,7 @@
+                                                          @RequestParam("firstName")String firstName,
+                                                          @RequestParam("lastName")String lastName,
+                                                          @RequestParam("birthDate") LocalDate birthDate,
+-                                                         @RequestParam("gender")String gender)
++                                                         @RequestParam("geneder")String geneder)
+     {
+         Optional<MoviePeople> optionalMoviePeople = moviePeopleService.findOneById(id);
+         if (optionalMoviePeople.isPresent())
+@@ -58,7 +59,7 @@
+             moviePeople.setFirstName(firstName);
+             moviePeople.setLastName(lastName);
+             moviePeople.setBirthDate(birthDate);
+-            moviePeople.setGeneder(gender);
++            moviePeople.setGeneder(geneder);
+             moviePeopleService.create(moviePeople);
+             return ResponseEntity.ok(moviePeople);
+         }
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_6.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_6.xml b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_6.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_6.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-security:2.5.6">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/2.5.6/spring-boot-starter-security-2.5.6.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/2.5.6/spring-boot-starter-security-2.5.6-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/2.5.6/spring-boot-starter-security-2.5.6-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_6.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_6.xml b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_6.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_6.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-validation:2.5.6">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-validation/2.5.6/spring-boot-starter-validation-2.5.6.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-validation/2.5.6/spring-boot-starter-validation-2.5.6-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-validation/2.5.6/spring-boot-starter-validation-2.5.6-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml b/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: jakarta.validation:jakarta.validation-api:2.0.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: movies/src/main/java/com/lanaco/movies/Models/MoviePeople.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.lanaco.movies.Models;\r\n\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;\r\nimport lombok.experimental.Accessors;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDate;\r\nimport java.util.Date;\r\n\r\n@Data\r\n@NoArgsConstructor\r\n@Entity\r\n@Table(name = \"movie_people\", schema = \"public\")\r\n@Accessors(chain = true)\r\npublic class MoviePeople {\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.AUTO)\r\n    @Column(name = \"moviePeopleId\")\r\n    public int moviePeopleId;\r\n    public String firstName;\r\n    public String lastName;\r\n    public LocalDate birthDate;\r\n    public String geneder;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/movies/src/main/java/com/lanaco/movies/Models/MoviePeople.java b/movies/src/main/java/com/lanaco/movies/Models/MoviePeople.java
+--- a/movies/src/main/java/com/lanaco/movies/Models/MoviePeople.java	
++++ b/movies/src/main/java/com/lanaco/movies/Models/MoviePeople.java	
+@@ -1,5 +1,6 @@
+ package com.lanaco.movies.Models;
+ 
++import com.fasterxml.jackson.annotation.JsonFormat;
+ import lombok.Data;
+ import lombok.NoArgsConstructor;
+ import lombok.experimental.Accessors;
+@@ -20,6 +21,7 @@
+     public int moviePeopleId;
+     public String firstName;
+     public String lastName;
++    @JsonFormat(pattern = "yyyy-MM-dd")
+     public LocalDate birthDate;
+     public String geneder;
+ 
+Index: .idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml b/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.hibernate.validator:hibernate-validator:6.2.0.Final">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.2.0.Final/hibernate-validator-6.2.0.Final.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.2.0.Final/hibernate-validator-6.2.0.Final-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.2.0.Final/hibernate-validator-6.2.0.Final-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: movies/src/main/resources/application-dev.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server.port=8080\r\n\r\nspring.datasource.url=jdbc:postgresql://localhost:5432/movies\r\nspring.datasource.username=postgres\r\nspring.datasource.password=dusko1102\r\n\r\nspring.jpa.open-in-view=false\r\n\r\nspring.jpa.hibernate.use-new-id-generator-mappings=false\r\n\r\nspring.jpa.hibernate.ddl-auto=none\r\n\r\nspring.jpa.show-sql=true\r\n\r\nspring.datasource.initialization-mode=never
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/movies/src/main/resources/application-dev.properties b/movies/src/main/resources/application-dev.properties
+--- a/movies/src/main/resources/application-dev.properties	
++++ b/movies/src/main/resources/application-dev.properties	
+@@ -4,6 +4,7 @@
+ spring.datasource.username=postgres
+ spring.datasource.password=dusko1102
+ 
++
+ spring.jpa.open-in-view=false
+ 
+ spring.jpa.hibernate.use-new-id-generator-mappings=false
+Index: .idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_3.xml b/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.security:spring-security-crypto:5.5.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/5.5.3/spring-security-crypto-5.5.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/5.5.3/spring-security-crypto-5.5.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/5.5.3/spring-security-crypto-5.5.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_3.xml b/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.security:spring-security-web:5.5.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.3/spring-security-web-5.5.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.3/spring-security-web-5.5.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.3/spring-security-web-5.5.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_3.xml b/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.security:spring-security-config:5.5.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.3/spring-security-config-5.5.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.3/spring-security-config-5.5.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.3/spring-security-config-5.5.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_3.xml b/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.security:spring-security-core:5.5.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.3/spring-security-core-5.5.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.3/spring-security-core-5.5.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.3/spring-security-core-5.5.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
