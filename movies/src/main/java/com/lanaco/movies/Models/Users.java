@@ -22,7 +22,7 @@ public class Users {
     public int userId;
     public String userName;
     public String firstName;
-    public   String lastName;
+    public String lastName;
     public String adress;
     public String phoneNumber;
     public String email;

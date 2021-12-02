@@ -20,6 +20,7 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
     @Override
     public List<UserRole>findAll(){
-        return userRoleRepository.findAllByUserId(0);
+        return userRoleRepository.findAll();
     }
+
 }

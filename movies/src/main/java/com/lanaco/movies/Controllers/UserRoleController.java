@@ -21,9 +21,9 @@ public class UserRoleController {
         List<UserRole>allUserRole = userRoleService.findAll();
         return ResponseEntity.ok(allUserRole);
     }
-    @PostMapping("/")
+   /* @PostMapping("/")
     public ResponseEntity<UserRole>createUserRole(@RequestBody UserRoleDto userRoleParam){
         UserRole createdUserRole = userRoleService.create(userRoleParam.toUserRole());
         return ResponseEntity.ok(createdUserRole);
-    }
+    }*/
 }
