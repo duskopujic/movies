@@ -1,4 +1,4 @@
-package com.lanaco.movies.Models.Dto;
+package com.lanaco.movies.Models.Response;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -20,5 +20,6 @@ public class ContentResponseDto {
     private String contentTypeName;
     private String countryName;
     private String languageName;
+
 
 }

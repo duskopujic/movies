@@ -7,8 +7,16 @@ import java.util.Optional;
 
 public interface ContentService {
     Content create(Content content);
-    List<Content>findAll();
-    Optional<Content>findOneById(int id);
-    List<Content>findAllByRating(Double rating);
+
+    List<Content> findAll();
+
+    Optional<Content> findOneById(int id);
+
+    List<Content> findAllByOrderByRating();
+
     void deleteById(int id);
+
+    List<Double> findAllRating();
+
+    List<Content> findAllByOrderByReleaseDate();
 }

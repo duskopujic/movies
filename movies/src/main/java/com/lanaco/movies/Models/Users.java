@@ -17,19 +17,19 @@ import java.util.Set;
 @NoArgsConstructor
 public class Users {
     @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
     public int userId;
     public String userName;
     public String firstName;
-    public   String lastName;
+    public String lastName;
     public String adress;
     public String phoneNumber;
     public String email;
     public String password;
 
-  //  @ManyToMany
-  //  @JoinTable(schema = "public",name = "user_role",joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
+    //@ManyToMany
+   // @JoinTable(schema = "public",name = "user_role",joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
    // private Set<Role> roleList;
 
 }

@@ -3,6 +3,8 @@ package com.lanaco.movies.Controllers;
 import com.lanaco.movies.Models.Country;
 import com.lanaco.movies.Models.Dto.CountriDto;
 import com.lanaco.movies.Services.CountryService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +22,14 @@ public class CountryController {
     }
 
     @GetMapping("/all")
+
     public ResponseEntity<List<Country>>findAllCountry(){
         List<Country>allCountry=countryService.findAll();
         return ResponseEntity.ok(allCountry);
     }
 
-    @GetMapping("")
+    @GetMapping("/")
+
     public ResponseEntity<Country> getOneCountry(@RequestParam("id")int id){
         Optional<Country> optionalCountry = countryService.findOneById(id);
         if(optionalCountry.isPresent()){
@@ -34,11 +38,13 @@ public class CountryController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     @PostMapping("/save")
+
     public ResponseEntity<Country> createCountry(@RequestBody CountriDto countryParam){
         Country createdCountry=countryService.create(countryParam.toCountry());
                 return ResponseEntity.ok(createdCountry);
     }
     @PutMapping("/update")
+
     public ResponseEntity<Country> updateCountry(@RequestParam("id")int id, @RequestParam("name")String name,@RequestParam("code")String code){
         Optional <Country> optionalCountry = countryService.findOneById(id);
         if(optionalCountry.isPresent()){
@@ -51,6 +57,7 @@ public class CountryController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     @DeleteMapping("/delete")
+
     public void deleteCountry(@RequestParam("id")int id){
         countryService.deleteById(id);
     }

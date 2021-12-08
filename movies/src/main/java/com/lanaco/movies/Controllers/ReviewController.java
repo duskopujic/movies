@@ -3,6 +3,8 @@ package com.lanaco.movies.Controllers;
 import com.lanaco.movies.Models.Dto.ReviewDto;
 import com.lanaco.movies.Models.Review;
 import com.lanaco.movies.Services.ReviewService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,12 +18,14 @@ public class ReviewController {
     public ReviewController(ReviewService reviewService){
         this.reviewService = reviewService;
     }
-    @GetMapping("/")
+    @GetMapping("")
+
     public ResponseEntity<List<Review>>findAll(){
         List<Review>allReview = reviewService.findAll();
         return ResponseEntity.ok(allReview);
     }
-    @PostMapping("/")
+    @PostMapping("")
+
     public ResponseEntity<Review>createReview(@RequestBody ReviewDto reviewParam){
         Review createdReview = reviewService.create(reviewParam.toReview());
         return ResponseEntity.ok(createdReview);

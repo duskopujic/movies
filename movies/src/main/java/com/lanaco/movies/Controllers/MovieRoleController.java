@@ -3,6 +3,8 @@ package com.lanaco.movies.Controllers;
 import com.lanaco.movies.Models.Dto.MovieRoleDto;
 import com.lanaco.movies.Models.MovieRole;
 import com.lanaco.movies.Services.MovieRoleService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,13 +20,16 @@ public class MovieRoleController {
     {
         this.movieRoleService=movieRoleService;
     }
+
     @GetMapping (path = "/all")
+
     public ResponseEntity<List<MovieRole>>findAllMovieRole()
     {
         List<MovieRole>allMovieRole=movieRoleService.findAll();
         return ResponseEntity.ok(allMovieRole);
     }
     @GetMapping("")
+
     public ResponseEntity<MovieRole>getOneMovieRole(@RequestParam("id")int id)
     {
         Optional<MovieRole> optionalMovieRole = movieRoleService.findOneById(id);
@@ -34,13 +39,15 @@ public class MovieRoleController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    @PostMapping (path = "/save")
+    @PostMapping ("/save")
+
     public ResponseEntity<MovieRole>createMovieRole(@RequestBody MovieRoleDto movieRoleParam)
     {
         MovieRole createdMovieRole=movieRoleService.create(movieRoleParam.toMovieRole());
         return ResponseEntity.ok(createdMovieRole);
     }
     @PutMapping("/update")
+
     public ResponseEntity<MovieRole>updateMovieRole(@RequestParam("id")int id,
                                                     @RequestParam("name")String name)
     {
@@ -55,6 +62,7 @@ public class MovieRoleController {
     return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     @DeleteMapping("/delete")
+
     public void deleteMovieRole(@RequestParam("id")int id)
     {
         movieRoleService.deleteById(id);

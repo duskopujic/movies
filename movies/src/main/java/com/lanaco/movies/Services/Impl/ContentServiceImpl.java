@@ -32,14 +32,24 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public List<Content> findAllByRating(Double rating) {
-        return contentRepository.findAllByRating(rating);
+    public List<Content> findAllByOrderByRating() {
+        return contentRepository.findAllByOrderByRating();
     }
 
     @Override
     public void deleteById(int id) {
         contentRepository.deleteById(id);
 
+    }
+
+    @Override
+    public List<Double> findAllRating() {
+        return contentRepository.findAllRating();
+    }
+
+    @Override
+    public List<Content> findAllByOrderByReleaseDate() {
+        return contentRepository.findAllByOrderByReleaseDate();
     }
 
 }

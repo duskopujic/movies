@@ -21,7 +21,7 @@ public class MovieRoleServiceImpl implements MovieRoleService {
     }
     @Override
     public List<MovieRole>findAll(){
-        return movieRoleRepository.findAllByMovieRoleIdGreaterThanOrderByMovieRoleIdDesc(0);
+        return movieRoleRepository.findAll();
     }
     @Override
     public Optional<MovieRole>findOneById(int id){

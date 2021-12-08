@@ -1,13 +1,12 @@
 package com.lanaco.movies.Models;
 
-import com.lanaco.movies.Models.Dto.ContentResponseDto;
+import com.lanaco.movies.Models.Response.ContentResponseDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -19,12 +18,15 @@ public class Content {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "contentId")
     public int contentId;
+
     @ManyToOne
     @JoinColumn(name = "contentTypeId")
     public ContentType contentType;
+
     @ManyToOne
     @JoinColumn(name = "countryId")
     public Country country;
+
     @ManyToOne
     @JoinColumn(name = "languageId")
     public Language language;
