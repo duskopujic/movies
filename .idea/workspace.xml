@@ -4,57 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcde88af-4742-4c86-b7e8-7addc4d0ebd2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_47_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_47_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="dcde88af-4742-4c86-b7e8-7addc4d0ebd2" name="Changes" comment="Movies update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentCommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentGenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentGenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/CountryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/EpisodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/EpisodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/GenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/LanguageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/LanguageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieCastController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieCastController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SeasonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SeasonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SerieCastController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SerieCastController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UserRoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/CustomAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/CustomAccessDeniedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/RegistrationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/RegistrationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/AuthUsersDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/AuthUsersDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/CompositeKeys/UserRoleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/CompositeKeys/UserRoleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserRoleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserRoleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/MovieRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/MovieRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/MovieRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/MovieRoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UserRoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/MovieRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/MovieRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UserRoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UserRoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/movies/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638454827582</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Movies update">
+      <created>1638971374484</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638971374484</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
