@@ -11,12 +11,10 @@ import java.util.Optional;
 @Repository
 public interface UsersRepository extends JpaRepository<Users,Integer>{
 
-    List<Users>findAllByUserIdGreaterThanOrderByUserIdDesc(int id);
-
     Optional<Users>findByUserName(String userName);
     Optional<Users>findByEmail(String email);
 
-    boolean existsByUserName(String userName);
+    boolean existsByUserName(String username);
     boolean existsByEmail(String email);
 }
 

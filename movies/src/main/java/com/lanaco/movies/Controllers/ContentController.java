@@ -12,6 +12,8 @@ import com.lanaco.movies.Repository.ContentTypeRepository;
 import com.lanaco.movies.Repository.CountryRepository;
 import com.lanaco.movies.Repository.LanguageRepository;
 import com.lanaco.movies.Services.ContentService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +42,7 @@ public class ContentController {
     }
 
     @GetMapping("/all")
+
     public ResponseEntity<List<ContentResponseDto>> findAll() {
         List<Content> allContent = contentService.findAll();
 
@@ -62,6 +65,7 @@ public class ContentController {
     }*/
 
     @GetMapping("/{id}")
+
     public ResponseEntity<ContentResponseDto>getOneById(@PathVariable("id")int id)
     {
         Optional<Content> optionalContent = contentService.findOneById(id);
@@ -75,6 +79,7 @@ public class ContentController {
 
 
     @PostMapping("/save-movie")
+
     public ResponseEntity<Content> createContent(@RequestBody ContentDto contentDto) {
 
         ContentType contentType = contentTypeRepository.findById(contentDto.getContentTypeId()).get();
@@ -130,6 +135,7 @@ public class ContentController {
      */
 
     @PutMapping("/update-movie")
+
     public ResponseEntity<ContentResponseDto> updateContent1(@RequestBody ContentRequestDto contentRequestDto) {
         Optional<Content> optionalContent = contentService.findOneById(contentRequestDto.getContentId());
 
@@ -160,23 +166,27 @@ public class ContentController {
     }
 
     @DeleteMapping("/delete")
+
     public void deleteContent(@RequestParam("id") int id) {
         contentService.deleteById(id);
     }
 
     @GetMapping("/by-rating")
+
     public ResponseEntity<List<Content>> findAllByOrderByRating() {
         List<Content> findAllRating = contentService.findAllByOrderByRating();
         return ResponseEntity.ok(findAllRating);
     }
 
     @GetMapping("/rating")
+
     public ResponseEntity<List<Double>> findAllRating() {
         List<Double> AllRating = contentService.findAllRating();
         return ResponseEntity.ok(AllRating);
     }
 
     @GetMapping("/by-release-date")
+
     public ResponseEntity<List<Content>> findAllByOrderByReleaseDate() {
         List<Content> findAllReleaseDate = contentService.findAllByOrderByReleaseDate();
         return ResponseEntity.ok(findAllReleaseDate);

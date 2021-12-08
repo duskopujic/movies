@@ -22,9 +22,9 @@ import java.util.Optional;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UsersService usersService;
+    UsersService usersService;
     @Autowired
-    private UserRoleRepository userRoleRepository;
+    UserRoleRepository userRoleRepository;
 
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         Optional<Users>users=usersService.findUsersByUsersName(userName);
@@ -32,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         List<UserRole>userRoles=userRoleRepository.findByUsers(users.get());
 
         AuthUsersDetails auth=new AuthUsersDetails(users,userRoles);
-        return auth;
 
+        return auth;
     }
 }

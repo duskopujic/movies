@@ -18,12 +18,15 @@ public class Content {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "contentId")
     public int contentId;
+
     @ManyToOne
     @JoinColumn(name = "contentTypeId")
     public ContentType contentType;
+
     @ManyToOne
     @JoinColumn(name = "countryId")
     public Country country;
+
     @ManyToOne
     @JoinColumn(name = "languageId")
     public Language language;

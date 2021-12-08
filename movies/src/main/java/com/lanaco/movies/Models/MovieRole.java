@@ -13,9 +13,8 @@ import javax.persistence.*;
 @Entity
 public class MovieRole {
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "movieRoleId")
-
     public int movieRoleId;
     public String name;
 }

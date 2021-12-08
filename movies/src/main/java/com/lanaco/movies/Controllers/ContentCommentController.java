@@ -8,6 +8,8 @@ import com.lanaco.movies.Repository.ContentCommentRepository;
 import com.lanaco.movies.Repository.ContentRepository;
 import com.lanaco.movies.Repository.UsersRepository;
 import com.lanaco.movies.Services.ContentCommentService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping (path = "/ContentComment")
+@RequestMapping (path = "/Content-comment")
 public class ContentCommentController {
     private final ContentCommentService contentCommentService;
 
@@ -30,12 +32,12 @@ public class ContentCommentController {
    private ContentCommentController(ContentCommentService contentCommentService){
         this.contentCommentService=contentCommentService;
     }
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<ContentComment>> findAllContentComment(){
         List<ContentComment> allContentComment=contentCommentService.findAll();
         return ResponseEntity.ok(allContentComment);
     }
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<ContentComment>createContentComment(@RequestBody ContentCommentDto contentCommentDto){
 
        Users users=usersRepository.findById(contentCommentDto.getUsersId()).get();

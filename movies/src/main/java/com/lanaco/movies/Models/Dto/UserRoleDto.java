@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class UserRoleDto {
-    private int usersId;
+    private int userId;
     private int roleId;
 
 

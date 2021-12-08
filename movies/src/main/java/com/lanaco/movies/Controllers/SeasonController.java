@@ -6,6 +6,8 @@ import com.lanaco.movies.Models.Season;
 import com.lanaco.movies.Repository.ContentRepository;
 import com.lanaco.movies.Repository.SeasonRepository;
 import com.lanaco.movies.Services.SeasonService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,12 +28,14 @@ public class SeasonController {
     public SeasonController(SeasonService seasonService){
         this.seasonService= seasonService;
     }
-    @GetMapping("/")
+    @GetMapping("")
+
     public ResponseEntity<List<Season>>findAllSeason(){
         List<Season> allSeason=seasonService.findAll();
         return ResponseEntity.ok(allSeason);
     }
-    @PostMapping("/")
+    @PostMapping("")
+
     public ResponseEntity<Season> createSeason(@RequestBody SeasonDto seasonDto){
 
         Content content = contentRepository.findById(seasonDto.getContentId()).get();

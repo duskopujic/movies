@@ -5,43 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcde88af-4742-4c86-b7e8-7addc4d0ebd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_36_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_36_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_21_AM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_47_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_10_47_PM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_06_AM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_32_AM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_29_2021_11_35_AM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movies/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Config/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UserRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UserRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/SwaggerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentGenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentGenreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ContentTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/CountryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/CountryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/EpisodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/EpisodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/GenreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/LanguageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/LanguageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieCastController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieCastController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MoviePeopleRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/MovieRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SeasonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SeasonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SerieCastController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/SerieCastController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UserRoleController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/CustomAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/RegistrationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Exception/RegistrationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/AuthUsersDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/AuthUsersDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/CompositeKeys/UserRoleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/CompositeKeys/UserRoleId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Content.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserRoleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Dto/UserRoleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/MoviesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/MoviesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/MovieRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Models/MovieRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/MovieRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/MovieRoleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UserRoleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UserRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/MovieRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/MovieRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UserRoleServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/Impl/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UserRoleService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/movies/src/main/java/com/lanaco/movies/Utils/JwtUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +208,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638350854841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Movies update">
+      <created>1638454780286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638454780286</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Movies update">
+      <created>1638454827582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638454827582</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +262,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="my first git" />
     <MESSAGE value="Swagger config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swagger config" />
+    <MESSAGE value="Movies update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movies update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/movies$MoviesApplication.ic" NAME="MoviesApplication Coverage Results" MODIFIED="1638452794184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

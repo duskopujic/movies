@@ -22,7 +22,7 @@ public class AuthUsersDetails implements UserDetails {
     this.userName=users.get().getUserName();
     this.password=users.get().getPassword();
     this.active=true;
-    this.authorities=userRoles.stream().map(e->new SimpleGrantedAuthority(e.getRole().getName()))
+    this.authorities = userRoles.stream().map(e-> new SimpleGrantedAuthority(e.getRole().getName()))
             .collect(Collectors.toList());
     }
 

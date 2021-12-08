@@ -17,6 +17,7 @@ import java.util.Date;
 
 @Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
+
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse response, AccessDeniedException e)
             throws IOException, ServletException {

@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -20,12 +21,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-private static final String[] ADMIN_URLS = {"/content-type/**","/content-comment/**","/country/**","/episode/**","/genre/**",
-        "/language/**","/movie-people/**","/movie-cast/**","/season/**"};
+private static final String[] ADMIN_URLS = {"/content-type/**","/content-comment/**","/movie-cast/**","/content-genre/**",
+       "/movie-people-role/**","/movie-role/**"};
 
-private static final String[] USER_URLS = {"/content/**","/users/","/genre/all/"};
+private static final String[] USER_URLS = {"/content/**","/language/**",
+        "/movie-people/**", "/genre/**","/review/**","/serie-cast/**"};
 
-private static final String[] PERMIT_ALL_URLS = {"/users/login/",
+private static final String[] PERMIT_ALL_URLS = {"/users/**","/country/**","/user_role/","/role/**","/episode/**",
+        "/season/**",
         // -- Swagger UI v2
         "/v2/api-docs", "/swagger-resources", "/swagger-resources/**", "/configuration/ui",
         "/configuration/security", "/swagger-ui.html", "/webjars/**",
@@ -48,12 +51,13 @@ private static final String[] PERMIT_ALL_URLS = {"/users/login/",
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(PERMIT_ALL_URLS).permitAll()
                 .antMatchers(ADMIN_URLS).hasRole("ADMIN")
-                .antMatchers(USER_URLS).hasAnyRole("ADMIN","USER")
+                .antMatchers(USER_URLS).hasAnyRole("USER", "ADMIN")
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
